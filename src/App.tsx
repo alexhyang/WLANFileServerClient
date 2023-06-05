@@ -5,23 +5,15 @@ import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Main />
-      <header className="App-header"></header>
-      <div className="container">
-        <div>First Div</div>
-        <div>Second Div</div>
-        <div className="player">
-          <video controls muted>
-            <source
-              src="http://localhost:4000/video/test"
-              type="video/mp4"
-            ></source>
-          </video>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/images" element={<Media mediaType="images" />} />
+        <Route path="/videos" element={<Media mediaType="videos" />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/favs" element={<Favs />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
