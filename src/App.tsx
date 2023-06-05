@@ -1,7 +1,6 @@
 import React from 'react'
-import Nav from 'components/Nav'
-import Main from 'components/Main'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home, Media, Stories, Favs } from 'pages'
 
 function App() {
   return (
